@@ -1,0 +1,166 @@
+body{
+  background-image: url("images/cover.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+
+/*Page Setup*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*Navbar Section*/
+
+.navBar{
+  position: relative;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+Removes the underline with text decoration = none.*/
+.navBar a{
+  float: right;
+  color:white;
+  padding: 25px 16px;
+  font-size: 17px;
+}
+
+.navBar a:hover{
+  color:white;
+  opacity: 60%;
+}
+
+.navBar .logo{
+  float: left;
+  padding: 25px 5px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.logo_image{
+  width: 150px;
+}
+
+.current_button{
+  text-decoration: underline white 3px;
+  text-underline-position: under;
+}
+
+.navBar .current_button:hover{
+  text-decoration: underline white 3px;
+  text-underline-position: under;
+  color: white;
+}
+
+.navBar .passive{
+  text-decoration: none;
+}
+
+/*Background color change during hover state*/
+
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon{
+  display: none;
+  text-decoration: none;
+}
+
+/*Set your custom screen width here replacing 700*/
+@media (max-width: 700px){
+/*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+  .navBar a:not(:first-child){
+    display: none;
+  }
+/*Brings the menu icon into view and floats it to the right*/
+  .navBar a.icon{
+    display: block; float: right;
+  }
+
+/*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+  .navBar.responsive {
+    position: relative;
+  }
+  .navBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+/*Removes the originally set float and brings them to view*/
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .navBar.responsive .logo {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.navbar{
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 50px;
+  background: white;
+}
+
+/*------------------------------------------------*/
+
+.self_picture{
+  width: 50%;
+  margin-left: 100px;
+}
+
+.content_2{
+  padding-top: 250px;
+  margin-left: 5%;
+  color: white;
+}
+
+.content_3{
+  position: relative;
+  margin-top: 250px;
+  padding-top: 25px;
+  padding-left: 5px;
+  height: auto;
+  width: 100%;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_3 .AboutMe_tittle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 50px;
+}
+
+.text{
+  margin-left: 2%;
+}
+.bullet_point{
+  margin-left: 5%;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background: Black;
+  color: white;
+}
+
+.phone_button:hover{
+  opacity: 60%;
+}
